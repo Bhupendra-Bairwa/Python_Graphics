@@ -1,0 +1,25 @@
+# install the library PythonTurtle 
+# open cmd and type pip install PythonTurtle
+
+from turtle import*
+import colorsys as cs
+bgcolor("black")
+pensize(3)
+tracer(20)
+h=0
+def draw(ang,s):
+    circle(5+s, 69)
+    left(ang)
+    circle(5 + s*2, 60)
+for i in range(150):
+    color(cs.hsv_to_rgb(h,1,1))
+    h += 0.005
+    up()
+    draw(90, i)
+    draw(180, i)
+    down()
+    draw(1/2,0)
+    draw(160,i/2)
+    draw(100,i-1)
+    draw(1.2,0)
+done()
